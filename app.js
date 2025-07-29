@@ -10,6 +10,7 @@ function addFriend(){
     } else {
         nameFriends.push(input);
     }
+    cleanInput();
 }
 
 function sortFriend(){
@@ -17,6 +18,11 @@ function sortFriend(){
     let sortedFriend = nameFriends.at(indexSorted);
     console.log(sortedFriend);
     list.innerHTML = `<li>${sortedFriend}</li>`;
+}
+
+function cleanInput(){
+    input = document.querySelector('input');
+    input.value = '';
 }
 
 
